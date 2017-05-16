@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/base.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/jquery.scrollify.min.js"></script>
+    <script type="text/javascript">
+        //平滑至顶部
+        $(function(){
+                $(".index-header").click(function(){
+                    $('html,body').animate({scrollTop:0}, 'slow');
+                })
+
+        //tab切换
+
+            $("#details").click(function(){
+                $(this).addClass("cur");
+                $("#notice,#configure,#breadcrumb").removeClass("cur");
+                $("#a").css("display","block");
+                $("#b,#c,#d").css("display","none");
+
+            })
+
+            $("#notice").click(function(){
+                $(this).addClass("cur");
+                $("#details,#configure,#breadcrumb").removeClass("cur");
+                $("#b").css("display","block");
+                $("#a,#c,#d").css("display","none");
+
+            })
+
+            $("#configure").click(function(){
+                $(this).addClass("cur");
+                $("#details,#notice,#breadcrumb").removeClass("cur");
+                $("#c").css("display","block");
+                $("#a,#b,#d").css("display","none");
+
+            })
+
+            $("#breadcrumb").click(function(){
+                $(this).addClass("cur");
+                $("#details,#notice,#configure").removeClass("cur");
+                $("#d").css("display","block");
+                $("#a,#c,#b").css("display","none");
+
+            })
+        });
+        $(window).scroll(function(){
+            var a=$(window).scrollTop();
+            if(a > 50){
+                $(".index-header").css("display","block");
+            }else{
+                $(".index-header").css("display","none");
+            }
+        });
+
+        //刷新返回顶部
+        $(function(){
+            window.onbeforeunload = function(){$(window).scrollTop(0)}
+            $('.index-header').css("display","none");
+        })
+
+        $(function(){
+            $("#tab li").click(function(){
+                $(this).addClass("cur");
+                $("#tab li").not(this).removeClass("cur");
+//                alert(1111);
+            });
+        });
+        //头部导航
+        $(function(){
+            $("#headerMenu a").click(function(){
+                $(this).addClass("head");
+                $("#headerMenu a").not(this).removeClass("head");
+//            alert(11111);
+            })
+        });
+
+    </script>
+    <title>公司简介</title>
+    <style type="text/css">
+        .head{
+            border-top:3px solid #00e3ea;
+            color:#fff !important;
+            cursor: pointer;
+        }
+        .cur{
+            background:#2fd0b5;
+
+        }
+        .cur:hover{
+            background:#2fd0b5;
+            color:#00dfb9;
+        }
+    </style>
+</head>
+<body>
+<!-- header -->
+<div class="top">
+    <div class="header" id="headerMenu">
+        <a href="index.html" >首页</a>
+        <a   class="head" href="introduce.html" style="margin-left:-6px;">公司简介</a>
+        <a  href="show.html" style="margin-left:-6px;" >产品展示</a>
+        <a  href="recruitment.html" style="margin-left:-6px;">人才招聘</a>
+        <a  href="about.html" style="margin-left:-6px;">联系我们</a>
+        <span class="topPosition"><img>0592-5923680</span>
+    </div>
+</div>
+<!-- end header -->
+
+
+<!-- The sidebar -->
+<!--<div class="side_bar hide">-->
+    <!--<ul>-->
+        <!--<li><a  style="background-color: #fed528;">客服电话</a> </li>-->
+        <!--<li><a  style="background-color: #a6ce39;">微信关注</a> </li>-->
+        <!--<li><a  href="#foot" class="index-header" onclick="scrollTop()" style="background-color: #ff6600;">回到顶部</a></li>-->
+        <!--<li><a  style="background-color: #e62469;">意見反馈</a> </li>-->
+    <!--</ul>-->
+<!--</div>-->
+<!-- end The sidebar -->
+
+
+
+</body>
+</html>

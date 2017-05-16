@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>官网首页</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="swiper/css/animate.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.css">
+
+    <!-- JS -->
+    <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="swiper/js/swiper.js"></script>
+    <script type="text/javascript" src="swiper/js/swiper.animate.min.js"></script>
+    <script type="text/javascript">
+        //头部导航
+        $(function(){
+            $("#headerMenu a").click(function(){
+                $(this).addClass("head");
+                $("#headerMenu a").not(this).removeClass("head");
+            })
+        });
+        window.onload=function(){//刷新返回顶部
+            $('html,body').animate({scrollTop: '0px'}, 900);
+        };
+        var winH=$(window).height();
+        var winB=winH-70;
+        $("#video").css("height",winH+"px");
+
+    </script>
+</head>
+<body>
+
+<!-- 头部 -->
+<div class="top">
+    <div class="header" id="headerMenu">
+        <a  href="index.html"   class="head padding10">首页</a>
+        <a  href="introduce.html" class="padding10">公司简介</a>
+        <a  href="show.html" class="padding10">产品展示</a>
+        <a  href="recruitment.html" class="padding10">人才招聘</a>
+        <a  href="about.html" class="padding10">联系我们</a>
+        <span class="topPosition"><img src="img/Phone.png" width="25"/><span style="margin-left:10px;">0592-5923680</span></span>
+    </div>
+</div>
+<!-- Swiper -->
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+
+        <!-- 第一屏 -->
+        <div class="swiper-slide one container-fluid">
+            <video id="video"  class="video-playing" id="hero-bg-video" loop="loop" autoplay="true" style="position: absolute;width:100%;">
+                <source src="video/saffron-hero-loop-1280x720.webm" type="video/webm">
+                <source src="video/saffron-hero-loop-1280x720.mp4"  type="video/mp4">
+            </video>
+            <div class="row text-content ani" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="0.5s">
+                <div class="col-md-12">
+                    <div class="font50">先入为主，布局未来</div>
+                    <div class="font24">全面<span class="font-color">pc</span>端与<span class="font-color">移动</span>端抢占头等商机</div>
+                    <div class="font24">基于<span class="font-color">Html5</span>响应式布局，智能识别多种终端设备</div>
+                </div>
+            </div>
+            <div class="row button">
+                <div class="col-md-12">
+                    <div><a href="#">进入东南正新</a></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 第二屏 -->
+        <div class="swiper-slide two">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="process">
+                            <p>WHAT CAN WE DO</p>
+                            <P class="font28">我们能做什么</P>
+                        </div>
+                        <div class="padding30">
+                            <div class="left">
+                                <img src="img/icon.png"     class="imgWidth" />
+                                <p class="margin10">高端定制网站</p>
+                            </div>
+                            <div class="left">
+                                <img src="img/icon-two.png" class="imgWidth" />
+                                <p class="margin10">移动网站建设</p>
+                            </div>
+                            <div class="left">
+                                <img src="img/icon-three.png" class="imgWidth" />
+                                <p class="margin10">业务系统开发</p>
+                            </div>
+                            <div class="left">
+                                <img src="img/icon-four.png" class="imgWidth" />
+                                <p class="margin10">APP应用程序</p>
+                            </div>
+                            <div class="left">
+                                <img src="img/icon-five.png" class="imgWidth" />
+                                <p class="margin10">服务器运维</p>
+                            </div>
+                            <div style="clear: both"></div>
+                            <div class="bottom">
+                                一等一客户，一等一服务
+                            </div>
+                            <div class="bottom">
+                                Win the customers,win the world for you
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 第三屏 -->
+        <div class="swiper-slide three">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="process-two">
+                            <p>CASES</p>
+                            <P class="font28">案例欣赏</P>
+                        </div>
+                        <div class="padding30">
+                            <div class="borderWidth ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="" style="margin-left:20px">
+                                <p class="margin10">网站设计</p>
+                                <p class="margin10">项目名称</p>
+                                <p class="margin10">项目简介</p>
+                            </div>
+                            <div class="borderWidth ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="">
+                                <p class="margin10">网站设计</p>
+                                <p class="margin10">项目名称</p>
+                                <p class="margin10">项目简介</p>
+                            </div>
+                            <div class="borderWidth ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="1s" swiper-animate-delay="">
+                                <p class="margin10">网站设计</p>
+                                <p class="margin10">项目名称</p>
+                                <p class="margin10">项目简介</p>
+                            </div>
+
+                            <div style="clear: both"></div>
+                            <div class="button-two">
+                                <a href="#" class="color">点击进入详情 ></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 第四屏 -->
+        <div class="swiper-slide four"></div>
+
+        <!-- 第五屏 -->
+        <div class="swiper-slide five">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6">
+                        <div class="footer">
+                            <p>地址:厦门市思明区吕玲路香山海景苑1790梯802室</p>
+                            <p>电话：0592-5923680</p>
+                            <p>邮编：362100</p>
+                            <p>Email:690332766@qq.com</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3"></div>
+                </div>
+
+                <div style=" border-bottom:3px dotted #666;width:800px;margin:0px auto;padding-top:40px;"></div>
+                <div class="bottom">
+                    选择东南正新，选择成功
+                </div>
+                <div class="bottom">
+                    Choose the southeast is new, choose success
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- 分页器 -->
+    <div class="swiper-pagination"></div>
+
+</div>
+
+
+<script>
+    var swiper = new Swiper('.swiper-container', {
+
+        //参数配置
+        pagination: '.swiper-pagination',
+        direction: 'vertical',
+        slidesPerView: 1,
+        speed:500,
+        paginationClickable: true,
+        spaceBetween: 0,
+        mousewheelControl: true,
+
+        //执行动画效果
+        onInit: function(swiper){
+            swiperAnimateCache(swiper);
+            swiperAnimate(swiper);
+        },
+        onSlideChangeEnd: function(swiper){
+            swiperAnimate(swiper);
+        }
+    });
+</script>
+</body>
+</html>
